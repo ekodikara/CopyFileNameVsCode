@@ -1,10 +1,13 @@
 {
   "name": "copy-filename-extension",
-  "publisher": "your-publisher",
+  "description": "Copy the current file name to the clipboard",
+  "displayName": "Copy Filename to Clipboard",
+  "publisher": "Moonxt | By Kodikara",
   "version": "0.0.1",
   "engines": {
-  "vscode": "^1.96.0"
+    "vscode": "^1.96.0"
   },
+  "icon": "icon.png",
   "activationEvents": ["onCommand:extension.copyFileName"],
   "main": "./dist/extension.js",
   "contributes": {
@@ -16,6 +19,13 @@
     ],
     "menus": {
       "explorer/context": [
+        {
+          "command": "extension.copyFileName",
+          "group": "navigation",
+          "when": "resource"
+        }
+      ],
+      "editor/title": [
         {
           "command": "extension.copyFileName",
           "group": "navigation",
@@ -51,4 +61,12 @@
     "@vscode/test-cli": "^0.0.10",
     "@vscode/test-electron": "^2.4.1"
   }
+  ,"repository": {
+    "type": "git",
+    "url": "https://github.com/your-repository-url.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-repository-url/issues"
+  },
+  "homepage": "https://github.com/your-repository-url"
 }
